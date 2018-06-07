@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_edit"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="@dimen/activity_horizontal_margin"
+    tools:context="com.example.oluwatobig.shelter.EditActivity">
+
+    <LinearLayout
+        android:id="@+id/overview_LL"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            style="@style/categoryStyle"
+            android:text="@string/overview"/>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:orientation="vertical"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:paddingLeft="4dp">
+
+            <EditText
+                android:id="@+id/name_editText"
+                style="@style/editStyle"
+                android:inputType="textCapWords"
+                android:hint="@string/hintName"/>
+
+            <EditText
+                android:id="@+id/breed_editText"
+                style="@style/editStyle"
+                android:inputType="textCapWords"
+                android:hint="@string/hintBreed"/>
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/gender_LL"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            style="@style/categoryStyle"
+            android:text="@string/gender"/>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_weight="2"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Spinner
+                android:id="@+id/genderSpinner"
+                android:layout_width="wrap_content"
+                android:paddingRight="16dp"
+                android:layout_height="48dp"
+                android:spinnerMode="dropdown"/>
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/meas_LL"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            style="@style/categoryStyle"
+            android:text="@string/measure"/>
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_weight="2"
+            android:layout_height="wrap_content"
+            android:paddingLeft="4dp">
+
+            <EditText
+                android:id="@+id/pet_weight_ET"
+                android:hint="@string/weight"
+                android:inputType="number"
+                style="@style/editStyle" />
+
+            <TextView
+                android:id="@+id/pet_weight_unit"
+                style="@style/editUnitStyle"
+                android:text="@string/unit"/>
+        </RelativeLayout>
+
+    </LinearLayout>
+
+</LinearLayout>
